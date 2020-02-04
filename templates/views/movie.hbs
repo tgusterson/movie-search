@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{!-- <link rel="icon" href="/img/weather.png"> --}}
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Movie Search</title>
+</head>
+
+<body>
+  {{>header}}
+  <main>
+    <h2>{{data.original_title}}</h2>
+    <h3><em>{{data.tagline}}</em></h3>
+    <div class="movie-container">
+      <img class="movie-poster" src="https://image.tmdb.org/t/p/original{{data.poster_path}}"
+        alt="{{data.original_title}} Poster">
+      <ul class="movie-details">
+        <li>
+          <span class="movie-details-entry">Release Date</span>
+          <br>
+          &nbsp{{data.release_date}}
+        </li>
+        <li>
+          <span class="movie-details-entry">Overview</span>
+          <br>
+          <p>{{data.overview}}</p>
+        </li>
+        <li>
+          <span class="movie-details-entry">Genres</span>
+          <br>
+          <ul class="movie-details-genre-list">
+            {{#each data.genres}}
+            <li>{{this.name}}</li>
+            {{/each}}
+          </ul>
+        </li>
+        <li>
+          <span class="movie-details-entry">Homepage</span>
+          <br>&nbsp
+          <a href="{{data.homepage}}">{{choose data.homepage 'No Homepage Found'}}</a>
+        </li>
+      </ul>
+    </div>
+    <a class="back-button" href="/">Go Back</a>
+  </main>
+  {{>footer}}
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{!-- <link rel="icon" href="/img/weather.png"> --}}
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/index.js" defer></script>
+  <title>Movie Search</title>
+</head>
+
+<body>
+  {{>header}}
+  <main>
+    <form class="search-form">
+      <input type="text" placeholder="Movie title">
+      <button class="search-button">Search</button>
+    </form>
+    <div class="search-output-container">
+      <div class="search-output"></div>
+      <div class="search-output-pages"></div>
+    </div>
+  </main>
+  {{>footer}}
+</body>
+
+</html>

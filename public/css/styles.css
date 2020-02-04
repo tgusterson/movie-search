@@ -78,6 +78,7 @@ button {
   padding: 0.3rem;
   border: none;
   margin: 5px;
+  background-color: rgb(187, 187, 187);
 }
 
 button:focus {
@@ -142,6 +143,7 @@ button:focus {
 .back-button {
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 5px;
   background: rgb(77, 13, 136);
 }
 

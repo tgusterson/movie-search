@@ -30,7 +30,7 @@ A user's latest search (including page) is stored using session storage in the b
 
 ## Contributing
 
-Please feel free to take this code and use it however you want. The only requirement to get it working is signing up for your own TMDb API key (https://www.themoviedb.org/documentation/api).
+Please feel free to take this code and use it however you want. The only requirement to get it working your own TMDb API key (https://www.themoviedb.org/documentation/api).
 
 
 ## Authors

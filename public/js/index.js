@@ -105,7 +105,7 @@ document.addEventListener('click', (e) => {
 window.addEventListener('load', () => {
   if (sessionStorage.getItem('state')) {
     const currentSearch = JSON.parse(sessionStorage.getItem('state'))
-    if (currentSearch.totalPages > 1 && currentSearch.search) {
+    if (currentSearch.search) {
       state.search = currentSearch.search
       state.pageNumber = currentSearch.pageNumber
       state.totalPages = currentSearch.totalPages

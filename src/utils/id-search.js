@@ -1,7 +1,8 @@
 const request = require('request')
 
 module.exports = (id, callback) => {
-  const url = `https://api.themoviedb.org/3/movie/${id}?api_key=ac4ab816a81365e99baa14ff186735ea`;
+  //USE YOUR OWN API KEY FOR TMDB BELOW
+  const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.TMDB_KEY}`;
 
   request({ url, json: true }, (error, { body } = {}) => {
     if (error) {

@@ -1,7 +1,7 @@
 const request = require('request')
 
 module.exports = (id, callback) => {
-  const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`;
+  const url = `https://api.themoviedb.org/3/movie/${id}?api_key=ac4ab816a81365e99baa14ff186735ea}`;
 
   request({ url, json: true }, (error, { body } = {}) => {
     if (error) {

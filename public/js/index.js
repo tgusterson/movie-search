@@ -64,6 +64,7 @@ movieForm.addEventListener('submit', (e) => {
   fetch(`/movie?search=${movie}`).then(res => res.json()).then((data) => {
     toggleLoader()
     renderSearchResults(data)
+    sessionStorage.setItem('state', JSON.stringify(state))
   })
 })
 
@@ -75,6 +76,7 @@ document.addEventListener('click', (e) => {
     fetch(`/movie?search=${state.search}&page=${state.pageNumber + 1}`).then(res => res.json()).then((data) => {
       toggleLoader()
       renderSearchResults(data)
+      sessionStorage.setItem('state', JSON.stringify(state))
     })
   }
 })
@@ -87,6 +89,7 @@ document.addEventListener('click', (e) => {
     fetch(`/movie?search=${state.search}&page=${state.pageNumber - 1}`).then(res => res.json()).then((data) => {
       toggleLoader()
       renderSearchResults(data)
+      sessionStorage.setItem('state', JSON.stringify(state))
     })
   }
 })
@@ -114,4 +117,3 @@ window.addEventListener('load', () => {
     }
   }
 })
-
